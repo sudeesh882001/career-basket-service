@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Basket Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#cc0000',
+                        secondary: '#ffa500'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 56px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .nav a:hover {
+            color: #9C0001;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://readdy.ai/api/search-image?query=professional%20educational%20environment%20with%20students%20and%20educators%20collaborating%2C%20blurred%20background%2C%20warm%20lighting%2C%20focus%20on%20papers%20and%20digital%20devices%2C%20academic%20setting%2C%20career%20counseling%20session&width=1600&height=800&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-section1 {
+            background-image: url(aboutus.png);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 10px 100px;
+        }
+
+        .about-section,
+        .services-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .service {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #aboutus {
+            padding: 30px 20px;
+        }
+
+        #service {
+            padding: 30px 20px;
+        }
+
+        #cbs {
+            padding: 30px 20px;
+        }
+
+        #client {
+            padding: 30px 20px;
+        }
+
+        #contact {
+            padding: 30px 20px;
+        }
+
+        .locations,
+        .contact,
+        .form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex: 1;
+            max-width: 45%;
+        }
+
+        .form input,
+        .form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .submit-btn {
+            background-color: #FFA500;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .verticals-section {
+            padding: 80px 20px;
+            background: #fefefe;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #9C0001;
+            margin-bottom: 50px;
+        }
+
+        .card-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            padding: 0 10px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+            /* Default no border */
+            position: relative;
+        }
+
+        .card:hover {
+            border-top: 4px solid #9C0001;
+            /* Change to your highlight color */
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            color: #FEA541;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .card strong {
+            color: #9C0001;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #FFA500;
+            font-size: 2.2rem;
+            margin-bottom: 0.2rem;
+            font-weight: 700;
+        }
+
+        .section p.subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .impact-list {
+            text-align: left;
+            margin: 2rem auto;
+            max-width: 700px;
+        }
+
+        .impact-list li {
+            list-style: none;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .impact-list li::before {
+            content: "🟠";
+            margin-right: 10px;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #333;
+            margin-top: 2rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #FFA500;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-section {
+            padding: 60px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #9C0001;
+            margin-bottom: 40px;
+        }
+
+        .card-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: nowrap;
+        }
+
+        .service-card {
+            flex: 1;
+            max-width: 210px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 15px;
+            box-shadow: 0 8px 20px rgba(254, 165, 65, 0.2);
+            border-top: 4px solid #FEA541;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-top: 4px solid #9C0001;
+            box-shadow: 0 12px 30px rgba(156, 0, 1, 0.2);
+        }
+
+        .service-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #FEA541;
+        }
+
+        .service-card h3 {
+            font-size: 1rem;
+            color: #FEA541;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 0.85rem;
+            color: #333;
+
+        }
+
+        .spacer {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: #888;
+        }
+
+        .impact-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #fff;
+        }
+
+        .impact-section h2 {
+            font-size: 2rem;
+            color: #ff9900;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-section h4 {
+            color: #333;
+            font-weight: normal;
+            margin-bottom: 2rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .impact-card {
+            background: #fff;
+            border-left: 5px solid #FFA81B;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .partners-section {
+            padding: 4rem 2rem;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .partners-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #222;
+        }
+
+        .partner-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+            align-items: center;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .partner-logos img {
+            max-width: 130px;
+            height: auto;
+            filter: grayscale(40%);
+            transition: all 0.3s ease;
+        }
+
+        .partner-logos img:hover {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+
+        .events-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            text-align: center;
+        }
+
+        .events-section h2 {
+            font-size: 3rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .events-section .sub-heading {
+            font-size: 1.3rem;
+            color: #444;
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .event-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(123, 9, 9, 0.25);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            border-radius: 20px;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .hexagon {
+            clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+            min-height: 180px;
+            transition: transform 0.3s ease;
+        }
+
+        .hexagon:hover {
+            transform: scale(1.05);
+        }
+        .contact-section {
+  padding: 40px 50px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.contact-section h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-section p {
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #555;
+}
+
+.contact-section .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-section .left-info,
+.contact-section .right-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-section .box {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #9C0001;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.contact-section .box h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact-section .box p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-section .social-icons span {
+  font-size: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.contact-section form {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.contact-section form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background: #9C0001;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.services-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.services-section .section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.services-section .card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.services-section .service-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.services-section .service-card:hover {
+  transform: translateY(-5px);
+}
+
+.services-section .icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* ✅ Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .services-section .card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-section .service-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.services-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #9C0001;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card-wrapper,
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 0 1rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 15px;
+  box-shadow: 0 8px 20px rgba(254, 165, 65, 0.2);
+  border-top: 4px solid #FEA541;
+  max-width: 300px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center">
+                    <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/main-logo-4ab64c45.png"
+                        alt="Career Basket Services Logo" class="h-14">
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-gray-800 font-medium hover:text-primary transition-colors">Home</a>
+                <a href="#aboutus" class="text-gray-800 font-medium hover:text-primary transition-colors">About Us</a>
+                <a href="#cbs" class="text-gray-800 font-medium hover:text-primary transition-colors">Platforms</a>
+                <a href="#client" class="text-gray-800 font-medium hover:text-primary transition-colors">Clients</a>
+                <a href="#contact" class="text-gray-800 font-medium hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <div class="md:hidden flex items-center">
+                <button class="text-gray-800 focus:outline-none w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line ri-2x"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4 py-16 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 style="color: #FE9D00;" class="text-5xl md:text-6xl font-bold mb-6">Career Basket Services</h1>
+                <h2 style="color: #FE9D00;" class="text-xl md:text-2xl mb-6">
+                    Empowering Students | Engaging Educators | Enabling Institutions
+                </h2>
+                <p style="color: #FE9D00;" class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                    Your trusted partner in career discovery, student outreach, and educator engagement since 2017.
+                </p>
+                <button
+                    class="bg-[#9C0001] hover:bg-[#e69516] text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out">
+                    Let's Partner
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!--About us section-->
+    <!-- Add this inside your HTML -->
+    <section id="aboutus" class="py-20 bg-gray-50 scroll-mt-16">
+        <div class="container mx-auto px-4 max-w-4xl text-center" data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-4" style="color: #9C0001;">
+                About Us
+            </h2>
+            <p>
+                <span class="font-semibold text-gray-800">Career Basket Services (CBS)</span> is a pioneering education
+                services company dedicated to building meaningful connections across the learning ecosystem.
+                <br /><br />
+                Since <span class="font-semibold text-red-600">2017</span>, we’ve worked with students, educators, and
+                institutions to co-create opportunities that shape careers and future-ready communities.
+                <br /><br />
+                We believe every <span class="font-semibold text-red-600">student</span> deserves informed choices,
+                every <span class="font-semibold text-red-600">educator</span> deserves a platform, and every <span
+                    class="font-semibold text-red-600">institution</span> deserves visibility.
+            </p>
+        </div>
+    </section>
+
+    <section class="relative py-20 bg-cover bg-center text-white overflow-hidden">
+        <!-- Blurred Background Image Layer -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/students-97120dbd.jpeg"
+                alt="Background" class="w-full h-full object-cover blur-lg" />
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+
+        <!-- Foreground Content -->
+        <div class="relative z-10 container mx-auto px-4 text-center">
+            <h2 style="color: #FE9D00;" class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4" data-aos="fade-down">
+                SUCCESS STORY CBS GROUP
+            </h2>
+            <p class="text-lg md:text-xl text-white mb-12" data-aos="fade-up" data-aos-delay="100">
+                We believe in <span style="color: #FE9D00;" class="text-yellow-400 font-semibold">"Engage | Educate | Evolve"</span>
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center items-center px-6">
+                <!-- Hexagon 1 -->
+                <div class="hexagon bg-[#FE9D00] text-black p-6 flex flex-col justify-center items-center shadow-xl"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-2xl font-bold"><span class="counter" data-target="40000">0</span>+</div>
+                    <p class="text-center text-sm font-medium">STUDENTS ENGAGED<br>THROUGH SCHOOL AND<br>COLLEGE
+                        OUTREACH</p>
+                </div>
+
+                <!-- Hexagon 2 -->
+                <div class="hexagon bg-red-700 text-white p-6 flex flex-col justify-center items-center shadow-xl"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-2xl font-bold"><span class="counter" data-target="900">0</span>+</div>
+                    <p class="text-center text-sm font-medium">EDUCATORS MOBILIZED<br>THROUGH WORKSHOPS<br>AND PANELS
+                    </p>
+                </div>
+
+                <!-- Hexagon 3 -->
+                <div class="hexagon bg-red-700 text-white p-6 flex flex-col justify-center items-center shadow-xl"
+                    data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-2xl font-bold"><span class="counter" data-target="200">0</span>+</div>
+                    <p class="text-center text-sm font-medium">SUCCESSFUL STUDENT-<br>CENTRIC EVENTS</p>
+                </div>
+
+                <!-- Hexagon 4 -->
+                <div class="hexagon bg-[#FE9D00] text-black p-6 flex flex-col justify-center items-center shadow-xl"
+                    data-aos="zoom-in" data-aos-delay="500">
+                    <div class="text-2xl font-bold"><span class="counter" data-target="100">0</span>+</div>
+                    <p class="text-center text-sm font-medium">UNIVERSITY AND<br>INSTITUTIONAL<br>COLLABORATIONS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!--verticals-->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Verticals</h2>
+            <div class="card-wrapper">
+                <div class="service-card">
+                    <h3>🎓 Student Outreach</h3>
+                    <p>
+                        Career and admissions events, masterclasses, and student engagement drives across India’s
+                        leading education hubs.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>👩‍🏫 Educator Engagement</h3>
+                    <p>
+                        Workshops, panel discussions, and network-building opportunities for teachers, counsellors, and
+                        coaching leaders.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>🏫 Institutional Branding</h3>
+                    <p>
+                        Helping colleges connect directly with high-intent students and trusted educators.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <h3>📱 Digital Initiatives</h3>
+                    <p>
+                        <strong>Mobile App</strong> – India’s emerging educator-student-industry network (coming soon).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--our service-->
+    </section>
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="card-row">
+                <div class="service-card">
+                    <div class="icon">🌐</div>
+                    <h3>Student Counselling</h3>
+                    <p>UG, PG & Study Abroad programs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🎓</div>
+                    <h3>CLAT, MBA & STEM</h3>
+                    <p>Masterclasses for exam prep.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💬</div>
+                    <h3>Educator Meetups</h3>
+                    <p>Panels & awards for educators.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🏛️</div>
+                    <h3>College Branding</h3>
+                    <p>Partnerships with institutions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🎥</div>
+                    <h3>Webinar Co-hosting</h3>
+                    <p>Digital sessions & content collabs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <br>
+
+    
+    <!-- CBS Foundation Section -->
+    <section id="cbs" class="py-20 bg-gray-50 scroll-mt-16">
+        <div class="container mx-auto px-4 max-w-5xl text-center">
+            <h2 class="text-4xl font-bold text-[#9C0001] mb-4">CBS Foundation</h2>
+            <p class="text-xl text-gray-600 mb-6">Empowering Education, Beyond Access</p>
+
+            <p class="text-gray-700 mb-10 max-w-3xl mx-auto">
+                <b>The CBS Foundation</b> is the impact-driven arm of Career Basket, committed to educational equity and
+                community engagement.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="bg-white p-6 rounded-xl shadow-md" data-aos="fade-up">
+                    <h4 class="font-semibold text-lg text-[#9C0001] mb-2">📚 School Outreach</h4>
+                    <p class="text-gray-600">Focused on Tier 2/3 cities to bring learning closer to underserved
+                        communities.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="font-semibold text-lg text-[#9C0001] mb-2">🎓 Free Counselling & Scholarships</h4>
+                    <p class="text-gray-600">Workshops that raise awareness and connect students with funding
+                        opportunities.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="font-semibold text-lg text-[#9C0001] mb-2">🔍 Career Discovery</h4>
+                    <p class="text-gray-600">Interactive programs that help learners find their path with clarity and
+                        confidence.</p>
+                </div>
+            </div>
+
+            <p class="text-lg mt-10 font-semibold text-gray-700 italic max-w-2xl mx-auto" data-aos="fade-in">
+                “Our mission is to ensure no learner is left behind due to lack of awareness or access.”
+            </p>
+        </div>
+    </section>
+
+    <section id="impact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl text-center">
+            <h2 class="text-4xl font-bold text-[#9C0001] mb-2">Impact Highlights</h2>
+            <h4 class="text-lg text-gray-600 mb-10">CBS Group 2023–24</h4>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-sm flex flex-col items-center text-center"
+                    data-aos="fade-up">
+                    <p class="text-gray-800 font-medium">
+                        <span class="font-bold text-[#9C0001]">📍 School Outreach:</span><br>
+                        50+ programs across rural and semi-urban India
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-sm flex flex-col items-center text-center"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-gray-800 font-medium">
+                        <span class="font-bold text-[#9C0001]">👨‍🎓 First-Gen Learners:</span><br>
+                        10,000+ supported through awareness drives
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-sm flex flex-col items-center text-center"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-gray-800 font-medium">
+                        <span class="font-bold text-[#9C0001]">💬 Free Counselling:</span><br>
+                        25+ sessions for Class 9–12 students
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-sm flex flex-col items-center text-center"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <p class="text-gray-800 font-medium">
+                        <span class="font-bold text-[#9C0001]">🤝 Collaborations:</span><br>
+                        With NGOs, educators, and community centers
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-sm flex flex-col items-center text-center"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <p class="text-gray-800 font-medium">
+                        <span class="font-bold text-[#9C0001]">📖 Focus Areas:</span><br>
+                        Career awareness, scholarships, exam guidance
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-sm flex flex-col items-center text-center"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <p class="text-gray-800 font-medium">
+                        <span class="font-bold text-[#9C0001]">🗺️ Regions:</span><br>
+                        Rajasthan, Maharashtra, Eastern UP, and Assam
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <br>
+    <!--partner section-->>
+    <section class="section" id="partners">
+        <h2 style="color: #9C0001;" data-aos="fade-up">Our Valued Partners</h2><br><br>
+
+        <div class="partner-logos" data-aos="fade-up" data-aos-delay="200">
+            <!-- Partner Logos Row 1 -->
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/thapar-institute-44fae76d.png"
+                alt="Thapar Institute">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/vit-456d6f45.png" alt="VIT">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/upes-532e70b6.png" alt="Manipal">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/manipal-4740bc15.png" alt="UPES">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/amrita-841e5ba0.png" alt="Amrita">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/somaiya-1ec545cf.png" alt="Somaiya">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/srm-4de28f35.png" alt="SRM">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/gitam-6fa64a4f.png" alt="GITAM">
+
+            <!-- Partner Logos Row 2 -->
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/mit-8777fb57.png" alt="MIT WPU">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/mody-9c708775.png" alt="PDEU">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/pdeu-88ad3eea.png"
+                alt="MODY University">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/srm-delhi-7eda5c64.png"
+                alt="SRM Sonepat">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/mahindra-9215f5a4.png"
+                alt="Mahindra University">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/iilm-961de6ac.png"
+                alt="Alliance University">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/presidency-4cb9a989.png" alt="IILM">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/sru-505d91b1.png"
+                alt="Presidency University">
+
+            <!-- Partner Logos Row 3 (from 2nd screenshot) -->
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/manav-rachna-fe62e158.png"
+                alt="SR University">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/sharda-81358808.png"
+                alt="Chanakya University">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/shiv-nadar-26f01e2f.png"
+                alt="Manav Rachna">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/sai-2683a606.png"
+                alt="Sharda University">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/alliance-210780b5.png" alt="Shiv Nadar">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/spsu-7f52ecdc.png"
+                alt="SAI University">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/bml-1a46a838.png"
+                alt="Atlas Skilltech">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/masters-union-4d30aaa9.png" alt="SPSU">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/jagsom-83971ba8.png" alt="BML Munjal">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/sda-3e921f58.png" alt="Masters Union">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/bennett-57f795e7.png" alt="JAGSOM">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/aiu-64bd7cb4.png" alt="SDA Bocconi">
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/mit-adt-5226d42e.png"
+                alt="Bennett University">
+            
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/atlas-a9e0f1be.png" alt="Shiv Nadar">
+           
+            <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/sharda-81358808.png" alt="SPSU">
+        </div>
+    </section>
+<br><br>
+    <!--Events Section-->
+    <section id="section" class="events-section">
+        <h2 style="color: #9C0001;" data-aos="fade-up">Events</h2>
+        <p class="sub-heading" data-aos="fade-up" data-aos-delay="100">
+            A glimpse into our events and collaborations
+        </p>
+
+        <div class="event-grid">
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-1-055d2ff3.jpg"
+                    alt="Event 1">
+            </div>
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="150">
+                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-2-9b9eb76f.jpg"
+                    alt="Event 2">
+            </div>
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-3-7591ef2d.jpg"
+                    alt="Event 3">
+            </div>
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="250">
+                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-4-bda9beeb.jpg"
+                    alt="Event 4">
+            </div>
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-5-2414b834.jpg"
+                    alt="Event 5">
+            </div>
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="350">
+                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-6-d09ca9e6.jpg"
+                    alt="Event 6">
+            </div>
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="400">
+                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-7-57d9c74c.jpg"
+                    alt="Event 7">
+            </div>
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="450">
+                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-8-03565f80.jpg"
+                    alt="Event 8">
+            </div>
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="500">
+                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-9-e2f75026.jpg"
+                    alt="Event 9">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Testimonials Section -->
+    <section id="client" class="py-20 bg-gray-50 scroll-mt-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 style="color: #9C0001;" class="text-3xl md:text-4xl font-bold mb-4">What Our Partners Say</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Hear from the students, educators, and institutions we've worked with.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "CBS brought clarity to our students at a crucial decision-making stage. Their events are
+                        professional and inspiring."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+                                <i class="ri-user-line ri-lg text-primary"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">PW Kota</h4>
+                            <p class="text-sm text-gray-500">Educational Institution</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "As an educator, partnering with CBS gave me reach and recognition I didn’t expect from a
+                        platform. I look forward to more."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <div
+                                class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+                                <i class="ri-user-line ri-lg text-primary"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Diksha Coaching</h4>
+                            <p class="text-sm text-gray-500">Hyderabad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+   <section id="contact" class="contact-section scroll-mt-16">
+  <h2 style="color: #9C0001;" class="text-3xl md:text-4xl font-bold mb-4">Partner With CBS</h1>
+  <p>Let's build meaningful opportunities together.</p>
+
+  <div class="container">
+    <div class="left-info">
+      <div class="box">
+        <h3>📍 Locations</h3>
+        <p>Chennai | Mumbai | Delhi | Kota |<br>Hyderabad | Vijayawada | Visakhapatnam</p>
+      </div>
+      <div class="box">
+        <h3>✉️ Email Us</h3>
+        <p>info@careerbasket.com</p>
+      </div>
+      <div class="box">
+        <h3>📞 Call Us</h3>
+        <p>+91-9444334755</p>
+      </div>
+      <div class="box">
+        <h3>🔗 Connect With Us</h3>
+        <div class="social-icons">
+           <span><i class="ri-linkedin-fill ri-lg"></i></span>
+    <span><i class="ri-youtube-fill ri-lg"></i></span>
+    <span><i class="ri-instagram-fill ri-lg"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-form">
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="relative w-full bg-[#FFF7E6] py-10 px-4 md:px-12 overflow-hidden">
+  <!-- Background Glow -->
+  <div class="absolute -top-16 -right-16 w-80 h-80 bg-yellow-300 opacity-20 rounded-full blur-3xl z-0"></div>
+
+  <!-- Centered Content -->
+  <div class="relative z-10 text-center max-w-5xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#9C0001] mb-4 leading-tight">
+      📱 The CBS Mobile App is Coming Soon
+    </h2>
+    <p class="text-gray-700 text-base md:text-lg mb-6">
+      India’s upcoming <strong>educator–student–institution</strong> network is almost here. Get early access and updates directly to your inbox.
+    </p>
+
+    <!-- Notify Me Form -->
+    <form id="notifyForm" class="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
+      <input type="email" id="notifyEmail" required
+             placeholder="Your email address"
+             class="px-5 py-3 rounded-full w-full sm:w-2/3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#9C0001] transition">
+      <button type="submit"
+              class="bg-[#9C0001] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#b30000] transition">
+        Notify Me
+      </button>
+    </form>
+
+    <p id="notifyMessage" class="text-green-600 mt-4 hidden font-medium">
+      You're on the list! We'll keep you posted 🚀
+    </p>
+  </div>
+</section>
+
+<br> <br>
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-[#9C0001] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-[#FEA541]">Career Basket Services</h3>
+                    <p class="text-gray-200 mb-6">Empowering students, educators, and institutions since 2017.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white text-[#9C0001] flex items-center justify-center hover:bg-[#FEA541] transition">
+                            <i class="ri-facebook-fill ri-lg"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white text-[#9C0001] flex items-center justify-center hover:bg-[#FEA541] transition">
+                            <i class="ri-twitter-fill ri-lg"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white text-[#9C0001] flex items-center justify-center hover:bg-[#FEA541] transition">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white text-[#9C0001] flex items-center justify-center hover:bg-[#FEA541] transition">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-[#FEA541]">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-[#FEA541] transition">Home</a></li>
+                        <li><a href="#aboutus" class="text-gray-300 hover:text-[#FEA541] transition">About Us</a></li>
+                        <li><a href="#service" class="text-gray-300 hover:text-[#FEA541] transition">Services</a></li>
+                        <li><a href="#cbs" class="text-gray-300 hover:text-[#FEA541] transition">Platforms</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-[#FEA541] transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-[#FEA541]">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-[#FEA541] transition">Student Career
+                                Discovery</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#FEA541] transition">Educator Engagement</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#FEA541] transition">Institutional Support</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#FEA541] transition">Career Assessment</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#FEA541] transition">Mentorship Programs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-[#FEA541]">Contact Us</h3>
+                    <ul class="space-y-3 text-gray-200 text-sm">
+                        <li class="flex items-start">
+                            <i class="ri-map-pin-line text-[#FEA541] mr-3 mt-1"></i>
+                            <span>123 Education Avenue, Academic District, CA 94105</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line text-[#FEA541] mr-3"></i>
+                            <span>(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-mail-line text-[#FEA541] mr-3"></i>
+                            <span>info@careerbasket.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-[#FEA541] pt-6 text-center">
+                <p class="text-gray-300 text-sm">© 2025 Career Basket Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script id="mobileMenuScript">
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.querySelector('.ri-menu-line').parentElement;
+            const nav = document.querySelector('nav');
+
+            menuButton.addEventListener('click', function () {
+                if (nav.classList.contains('hidden')) {
+                    nav.classList.remove('hidden');
+                    nav.classList.add('flex', 'flex-col', 'absolute', 'top-20', 'left-0', 'right-0', 'bg-white', 'shadow-md', 'p-4', 'space-y-4', 'space-x-0');
+                } else {
+                    nav.classList.add('hidden');
+                    nav.classList.remove('flex', 'flex-col', 'absolute', 'top-20', 'left-0', 'right-0', 'bg-white', 'shadow-md', 'p-4', 'space-y-4', 'space-x-0');
+                }
+            });
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const options = { duration: 2 };
+            new CountUp('studentsCount', 400000, options).start();
+            new CountUp('educatorsCount', 900, options).start();
+            new CountUp('eventsCount', 200, options).start();
+            new CountUp('collabCount', 100, options).start();
+        });
+    </script>
+    <script>
+        const counter = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const suffix = counter.getAttribute('data-suffix') || '';
+            let current = 0;
+
+            const increment = () => {
+                const speed = 200;
+                const step = target / speed;
+                current += step;
+                if (current < target) {
+                    counter.innerText = Math.floor(current) + suffix;
+                    requestAnimationFrame(increment);
+                } else {
+                    counter.innerText = target + suffix;
+                }
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                if (entries[0].isIntersecting) {
+                    increment();
+                    observer.disconnect();
+                }
+            }, { threshold: 1 });
+
+            observer.observe(counter);
+        });
+    </script>
+    <script>
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const duration = 2000; // total animation time in ms
+            const startTime = performance.now();
+
+            const updateCount = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const current = Math.floor(progress * target);
+
+                counter.textContent = current.toLocaleString();
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.textContent = target.toLocaleString(); // final value
+                }
+            };
+
+            requestAnimationFrame(updateCount);
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+  document.getElementById('notifyForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('notifyEmail').value;
+
+    // Simple frontend-only "thank you" (can be connected to backend)
+    if (email) {
+      document.getElementById('notifyMessage').classList.remove('hidden');
+      document.getElementById('notifyForm').reset();
+    }
+  });
+</script>
+
+
+
+</body>
+
+</html>
