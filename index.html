@@ -10,6 +10,12 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+    <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
     <script>
         tailwind.config = {
             theme: {
@@ -682,7 +688,24 @@
   text-align: center;
 }
 
+ .swiper {
+    width: 100%;
+    padding-bottom: 40px;
+  }
 
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    object-fit: cover;
+  }
     </style>
 </head>
 
@@ -692,7 +715,7 @@
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="#" class="flex items-center">
-                    <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/main-logo-4ab64c45.png"
+                    <img style="max-width: 85%;" src="https://mdyunus1996.github.io/Career-Basket-Service/assets/main-logo-4ab64c45.png"
                         alt="Career Basket Services Logo" class="h-14">
                 </a>
             </div>
@@ -881,7 +904,7 @@
 
     
     <!-- CBS Foundation Section -->
-    <section id="cbs" class="py-20 bg-gray-50 scroll-mt-16">
+    <section id="cbs" class="min-h-screen bg-gray-50 scroll-mt-16">
         <div class="container mx-auto px-4 max-w-5xl text-center">
             <h2 class="text-4xl font-bold text-[#9C0001] mb-4">CBS Foundation</h2>
             <p class="text-xl text-gray-600 mb-6">Empowering Education, Beyond Access</p>
@@ -980,6 +1003,48 @@
         </div>
     </section>
 
+ <section id="why" class="bg-[#f8f9fb] py-16 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-[#9C0001] mb-10" data-aos="fade-up">Why We Exist</h2>
+
+    <!-- Top Row: 3 cards -->
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 text-left">
+      <div class="bg-white shadow-md rounded-2xl p-6" data-aos="fade-up" data-aos-delay="0">
+        <p class="text-[#9C0001] font-semibold text-lg mb-2">🌍 Exposure for All:</p>
+        <p class="text-gray-700">Because exposure should be universal — not a matter of geography.</p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-[#9C0001] font-semibold text-lg mb-2">🏛️ Stronger Institutions:</p>
+        <p class="text-gray-700">Because stronger institutions create stronger communities and outcomes.</p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-[#9C0001] font-semibold text-lg mb-2">💡 Brilliance Without Borders:</p>
+        <p class="text-gray-700">Because brilliance knows no boundaries — but opportunity often does.</p>
+      </div>
+    </div>
+
+    <!-- Spacer -->
+    <div class="h-8"></div>
+
+    <!-- Second Row: 2 Centered Cards -->
+    <div class="flex flex-col md:flex-row justify-center gap-6">
+      <div class="bg-white shadow-md rounded-2xl p-6 w-full md:w-[350px]" data-aos="fade-up" data-aos-delay="300">
+        <p class="text-[#9C0001] font-semibold text-lg mb-2">🎓 Support for Educators:</p>
+        <p class="text-gray-700">Because educators are change-makers — and they deserve a system that supports them.</p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-2xl p-6 w-full md:w-[350px]" data-aos="fade-up" data-aos-delay="400">
+        <p class="text-[#9C0001] font-semibold text-lg mb-2">🌱 Empowering Communities:</p>
+        <p class="text-gray-700">Because when students, educators, and institutions are empowered, entire communities rise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
     <br>
     <!--partner section-->>
@@ -1042,57 +1107,46 @@
     </section>
 <br><br>
     <!--Events Section-->
-    <section id="section" class="events-section">
-        <h2 style="color: #9C0001;" data-aos="fade-up">Events</h2>
-        <p class="sub-heading" data-aos="fade-up" data-aos-delay="100">
-            A glimpse into our events and collaborations
-        </p>
+ <section class="py-16 bg-[#f4f2f8]">
+  <div class="container mx-auto px-4 text-center">
+    <h2 style="font-size: 2.25rem;" class="text-3xl font-extrabold text-[#9C0001] mb-2" data-aos="fade-up">Events</h2>
+    <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">
+      A glimpse into our events and collaborations
+    </p>
 
-        <div class="event-grid">
-            <div class="event-card" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-1-055d2ff3.jpg"
-                    alt="Event 1">
-            </div>
-            <div class="event-card" data-aos="zoom-in" data-aos-delay="150">
-                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-2-9b9eb76f.jpg"
-                    alt="Event 2">
-            </div>
-            <div class="event-card" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-3-7591ef2d.jpg"
-                    alt="Event 3">
-            </div>
-            <div class="event-card" data-aos="zoom-in" data-aos-delay="250">
-                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-4-bda9beeb.jpg"
-                    alt="Event 4">
-            </div>
-            <div class="event-card" data-aos="zoom-in" data-aos-delay="300">
-                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-5-2414b834.jpg"
-                    alt="Event 5">
-            </div>
-            <div class="event-card" data-aos="zoom-in" data-aos-delay="350">
-                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-6-d09ca9e6.jpg"
-                    alt="Event 6">
-            </div>
-            <div class="event-card" data-aos="zoom-in" data-aos-delay="400">
-                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-7-57d9c74c.jpg"
-                    alt="Event 7">
-            </div>
-            <div class="event-card" data-aos="zoom-in" data-aos-delay="450">
-                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-8-03565f80.jpg"
-                    alt="Event 8">
-            </div>
-            <div class="event-card" data-aos="zoom-in" data-aos-delay="500">
-                <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-9-e2f75026.jpg"
-                    alt="Event 9">
-            </div>
+    <!-- Swiper Carousel -->
+    <div class="swiper mySwiper" data-aos="zoom-in">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-1-055d2ff3.jpg" class="rounded-xl shadow-md" alt="Event 1" />
         </div>
-    </section>
+        <div class="swiper-slide">
+          <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-2-9b9eb76f.jpg" class="rounded-xl shadow-md" alt="Event 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-3-7591ef2d.jpg" class="rounded-xl shadow-md" alt="Event 3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-4-bda9beeb.jpg" class="rounded-xl shadow-md" alt="Event 4" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://mdyunus1996.github.io/Career-Basket-Service/assets/image-5-2414b834.jpg" class="rounded-xl shadow-md" alt="Event 5" />
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination mt-4"></div>
+    </div>
+  </div>
+</section>
 
+</section>
 
 
 
     <!-- Testimonials Section -->
-    <section id="client" class="py-20 bg-gray-50 scroll-mt-16">
+    <section id="client" class="min-h-screen bg-gray-50 scroll-mt-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 style="color: #9C0001;" class="text-3xl md:text-4xl font-bold mb-4">What Our Partners Say</h2>
@@ -1427,6 +1481,38 @@
     }
   });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 2000, // 3 seconds
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+</script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 
 
